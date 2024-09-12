@@ -1,0 +1,27 @@
+{% load static tailwind_tags %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% tailwind_css %}
+
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body class="bg-gray-500">
+    <div
+      class="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md m-auto p-10"
+    >
+      {% block content %} {% endblock content %}
+    </div>
+
+    <!-- script -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+  </body>
+</html>
